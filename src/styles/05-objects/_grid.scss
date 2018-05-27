@@ -849,3 +849,39 @@
 .grid-align-content-space-evenly {
     align-content: space-evenly;
 }
+
+@media (min-width: 1200px) {
+    .hide-on-large-only {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .hide-on-med-only {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hide-on-small-only {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .show-on-large-only {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .show-on-med-only {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .show-on-small-only {
+        display: block;
+    }
+}
