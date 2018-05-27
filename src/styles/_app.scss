@@ -6,6 +6,18 @@
 
 @import './03-generic/_normalize.scss';
 
+/*04-elements*/
+@import './04-elements/_ul.scss';
+@import './04-elements/_li.scss';
+@import './04-elements/_link.scss';
+
 /*05-objects*/
 
 @import './05-objects/_grid.scss';
+@import './05-objects/_li-top-nav.scss';
+@import './05-objects/_a-li-top-nav.scss';
+
+/*06-components*/
+
+@import './06-components/_header.scss';
+@import './06-components/_top-nav.scss';

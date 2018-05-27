@@ -299,6 +299,19 @@ template {
 [hidden] {
   display: none; }
 
+/*04-elements*/
+ul {
+  list-style-type: none;
+  margin: 0rem;
+  padding: 0rem; }
+
+ul li {
+  padding: 0.5rem 0rem;
+  text-align: center; }
+
+a {
+  text-decoration: none; }
+
 /*05-objects*/
 .row-flex {
   display: flex; }
@@ -1046,5 +1059,15 @@ template {
 
 .grid-align-content-space-evenly {
   align-content: space-evenly; }
+
+.top-nav ul li:nth-child(5) {
+  text-align: right; }
+
+.top-nav ul li:nth-child(5) a {
+  padding: 0rem 0.5rem; }
+
+/*06-components*/
+.header {
+  background-color: #b9b3b3; }
 
 /*# sourceMappingURL=tecMalaga.css.map */

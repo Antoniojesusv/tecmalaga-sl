@@ -6,19 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./styles/tecMalaga.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Tecmalaga</title>
 </head>
 
 <body>
     <header class="header">
-        <nav class="nav-top">
-            <ul>
-                <li>Home</li>
-                <li>Productos</li>
-                <li>Contactos</li>
+        <nav class="top-nav" id="myTopnav">
+            <ul class="row-flex">
+                <li class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <a href="#acerca de">Acerca de</a>
+                </li>
+                <li class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <a href="#productos">Productos</a>
+                </li>
+                <li class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <a href="#contacto">Contacto</a>
+                </li>
+                <li class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <a href="javascript:void(0);" class="icon" id="linkIconBar">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 </body>
+<script>
 
+const iconBars = window.document.getElementById('linkIconBar');
+
+iconBars.addEventListener('click', () => {
+    const myTopnav = document.getElementById('myTopnav');
+    x.className === topnav ? x.className += " responsive" : x.className = "topnav";    
+})
+</script>
 </html>
