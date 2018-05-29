@@ -1,5 +1,2 @@
-$ git status
-[...]
-# Untracked files:
-[...]
 .sass-cache
+node_modules

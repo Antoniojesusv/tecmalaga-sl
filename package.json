@@ -1,0 +1,22 @@
+{
+  "name": "tecmalaga-sl",
+  "version": "1.0.0",
+  "description": "It's a small project I'm doing for a company from Malaga (Spain) called Tecmalaga, the project is very simple, it will be a website where I will publish their products and the wonderful work they do every day with many future projections. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antoniojesusv/tecmalaga-sl.git"
+  },
+  "author": "Antonio Jesús Vázquez Muñoz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Antoniojesusv/tecmalaga-sl/issues"
+  },
+  "homepage": "https://github.com/Antoniojesusv/tecmalaga-sl#readme",
+  "dependencies": {
+    "animate.css": "^3.6.1"
+  }
+}
