@@ -1,13 +1,9 @@
 .top-nav-mobile {
     ul {
         li {
-            a{
+            a {
                 padding: 0rem 0.5rem;
             }
-        }
-
-        li:last-child:hover{
-            background-color: black;
         }
         position: relative;
         >div {
@@ -17,17 +13,14 @@
             li {
                 text-align: left;
             }
-
-            li a{
+            li a {
                 padding: 0rem 0.5rem;
             }
         }
-
-        >div.dropdown-visible{
+        >div.dropdown-visible {
             display: block;
         }
-
-        >div.dropdown-no-visible{
+        >div.dropdown-no-visible {
             display: none;
         }
     }
