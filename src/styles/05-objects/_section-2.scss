@@ -1,0 +1,24 @@
+.section-2 {
+    grid-template-columns: auto auto;
+    .article-1 {
+        grid-area: article1;
+    }
+    .article-2 {
+        grid-area: article2;
+    }
+    .article-3 {
+        grid-area: article3;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .section-2 {
+        grid-template-areas: "article1" "article2" "article3";
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+    .section-2 {
+        grid-template-areas: "article1 article1";
+    }
+}

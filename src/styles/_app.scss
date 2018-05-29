@@ -14,14 +14,12 @@
 /*05-objects*/
 @import './05-objects/_grid.scss';
 @import './05-objects/_header.scss';
-@import './05-objects/_li-top-nav.scss';
-@import './05-objects/_a-li-top-nav.scss';
-@import './05-objects/_sections.scss';
+@import './05-objects/_top-nav.scss';
+@import './05-objects/_top-nav-mobile.scss';
+@import './05-objects/_section-1.scss';
+@import './05-objects/_section-2.scss';
 
 /*06-components*/
 
-@import './06-components/_header.scss';
 @import './06-components/_top-nav.scss';
-@import './06-components/_li-top-nav';
-@import './06-components/_link.scss';
-@import './06-components/_sections.scss';
+@import './06-components/_section-1.scss';

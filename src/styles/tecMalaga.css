@@ -1060,70 +1060,111 @@ a {
 .grid-align-content-space-evenly {
   align-content: space-evenly; }
 
-@media (min-width: 1200px) {
-  .hide-on-large-only {
-    display: none; } }
-@media (min-width: 992px) {
-  .hide-on-med-only {
-    display: none; } }
-@media (min-width: 768px) {
-  .hide-on-small-only {
-    display: none; } }
-@media (min-width: 1200px) {
-  .show-on-large-only {
-    display: block; } }
-@media (min-width: 992px) {
-  .show-on-med-only {
-    display: block; } }
-@media (min-width: 768px) {
-  .show-on-small-only {
-    display: block; } }
-/*.header {
-    z-index: 3;
-}*/
-.top-nav ul li:nth-child(5) {
-  text-align: right; }
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .show-in-movil-only {
+    display: block; }
 
-.top-nav ul li:nth-child(5) a {
-  padding: 0rem 0.5rem; }
+  .show-in-movil-flex-only {
+    display: flex; }
 
-.section-1 {
-  height: 100vh; }
+  .hide-in-movil-only {
+    display: none; }
 
-/*.section-2 {
-    height: 100vh;
-}*/
-/*06-components*/
+  /* show it on small screens */ }
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .hide-in-elsewhere {
+    display: none; }
+
+  .show-in-elsewhere {
+    display: block; }
+
+  .show-in-elsewhere-flex {
+    display: flex; }
+
+  /* hide it elsewhere */ }
+.responsive-img {
+  width: 100%;
+  height: auto; }
+
 .header {
   position: fixed;
   width: 100%;
   top: 0%;
   z-index: 1; }
 
-.top-nav {
-  font-size: 2.5vmin;
-  font-family: "Lato", sans-serif; }
+.top-nav ul li:nth-child(5) a {
+  padding: 0rem 0.5rem; }
+.top-nav ul li:nth-child(5) {
+  text-align: right; }
 
-.top-nav ul li:hover {
-  background-color: rgba(233, 207, 172, 0.8); }
-
-.top-nav ul li a {
-  color: #0d0c0e; }
-
-.top-nav ul li:hover a {
-  color: white; }
+.top-nav-mobile ul {
+  position: relative; }
+  .top-nav-mobile ul li a {
+    padding: 0rem 0.5rem; }
+  .top-nav-mobile ul li:last-child:hover {
+    background-color: black; }
+  .top-nav-mobile ul > div {
+    width: 100%;
+    position: absolute;
+    top: 100%; }
+    .top-nav-mobile ul > div li {
+      text-align: left; }
+    .top-nav-mobile ul > div li a {
+      padding: 0rem 0.5rem; }
+  .top-nav-mobile ul > div.dropdown-visible {
+    display: block; }
+  .top-nav-mobile ul > div.dropdown-no-visible {
+    display: none; }
 
 .section-1 {
+  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  .section-1 .article-1 {
+    padding: 1rem; }
+
+.section-2 {
+  grid-template-columns: auto auto; }
+  .section-2 .article-1 {
+    grid-area: article1; }
+  .section-2 .article-2 {
+    grid-area: article2; }
+  .section-2 .article-3 {
+    grid-area: article3; }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .section-2 {
+    grid-template-areas: "article1" "article2" "article3"; } }
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .section-2 {
+    grid-template-areas: "article1 article1"; } }
+/*06-components*/
+.top-nav {
+  font-size: 1.8vmin;
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+  font-weight: bold; }
+  .top-nav ul li {
+    cursor: pointer; }
+  .top-nav ul li a {
+    color: #0d0c0e; }
+  .top-nav ul li:hover:not(:last-child) {
+    background-color: rgba(233, 207, 172, 0.8); }
+  .top-nav ul li:hover a {
+    color: white; }
 
 .section-1 {
   background-image: url("http://localhost/Proyectos-git/tecmalaga-sl/src/assets/images/nave-3.jpeg");
   opacity: 0.75; }
-
-.section-2 {
-  background-image: url("http://localhost/Proyectos-git/tecmalaga-sl/src/assets/images/nave-2.jpeg"); }
+  .section-1 .article-1 {
+    background-color: black; }
+    .section-1 .article-1 span {
+      color: white;
+      letter-spacing: 0.625rem;
+      font-size: 3vmin;
+      font-family: "Lato", sans-serif;
+      line-height: 1.7; }
 
 /*# sourceMappingURL=tecMalaga.css.map */
