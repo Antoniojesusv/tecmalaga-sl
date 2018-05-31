@@ -13,7 +13,7 @@
 
 <body class="body">
     <header class="header">
-        <nav class="top-nav hide-in-movil-only show-in-elsewhere">
+        <nav class="top-nav hide-in-movil-only show-in-elsewhere" id="topNav">
             <ul class="row-flex">
                 <li class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
                     <a href="#home">HOME</a>
@@ -31,7 +31,7 @@
                 </li>
             </ul>
         </nav>
-        <nav class="top-nav top-nav-mobile show-in-movil-only hide-in-elsewhere">
+        <nav class="top-nav top-nav-mobile show-in-movil-only hide-in-elsewhere font-resize" id="topNavMobile">
             <ul class="row-flex">
                 <li class="row-flex col-xs-10">
                     <a href="#home">HOME</a>
@@ -47,8 +47,8 @@
                         <a href="#contacto">CONTACTO</a>
                     </li>
                 </div>
-                <li class="col-xs-0 col-sm-4 col-md-6 col-lg-9">
-                    <a href="javascript:void(0);" class="icon" id="linkIconBar">
+                <li class="col-xs-0 col-sm-4 col-md-6 col-lg-9" id="linkIconBar">
+                    <a href="javascript:void(0);" class="icon">
                         <i class="fa fa-bars"></i>
                     </a>
                 </li>
@@ -105,9 +105,11 @@
 </body>
 <script>
     const iconBars = window.document.getElementById('linkIconBar');
+    const dropdownContent = document.getElementById('dropdownContent');
+    const topNav = document.getElementById('topNav');
+    const topNavMobile = document.getElementById('topNavMobile');
 
     iconBars.addEventListener('click', () => {
-        const dropdownContent = document.getElementById('dropdownContent');
         dropdownContent.className === "row-flex flex-direction-column dropdown-visible" ? noVisibleDropDown(dropdownContent) :
             visibleDropDown(dropdownContent);
     });
@@ -117,17 +119,21 @@
         dropdownContent.classList.add("dropdown-no-visible");
     }
 
-    const visibleDropDown = function (myTopnav) {
-        myTopnav.classList.remove("dropdown-no-visible");
-        myTopnav.classList.add("dropdown-visible");
+    const visibleDropDown = function (dropdownContent) {
+        dropdownContent.classList.remove("dropdown-no-visible");
+        dropdownContent.classList.add("dropdown-visible");
     }
 
     window.onscroll = function() {
         if(document.documentElement.scrollTop > 100){
-            console.log('soy menor');
+            topNav.className = "top-nav hide-in-movil-only show-in-elsewhere appear-sand-changes-color";
+            topNavMobile.className = "top-nav top-nav-mobile show-in-movil-only hide-in-elsewhere font-resize appear-sand-changes-color";
+            return 
         }
 
-        console.log('soy mayor');
+        topNav.className = "top-nav hide-in-movil-only show-in-elsewhere";
+        topNavMobile.className = "top-nav top-nav-mobile show-in-movil-only hide-in-elsewhere font-resize";
+
     }
 
     const activateAnimationTopDown = function() {

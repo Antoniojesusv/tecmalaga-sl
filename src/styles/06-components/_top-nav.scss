@@ -22,3 +22,10 @@
         }
     }
 }
+
+.top-nav.appear-sand-changes-color {
+    animation: appearSandChangesColor;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    position: relative;
+}

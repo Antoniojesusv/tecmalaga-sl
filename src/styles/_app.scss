@@ -21,6 +21,10 @@
 
 /*06-components*/
 
-@import './06-components/_top-nav-mobile.scss';
 @import './06-components/_top-nav.scss';
+@import './06-components/_top-nav-mobile.scss';
 @import './06-components/_section-1.scss';
+
+/*07-utilities*/
+
+@import './07-utilities/_top-nav.scss';
