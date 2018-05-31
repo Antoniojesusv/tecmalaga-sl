@@ -1083,7 +1083,7 @@ a {
 
   /* hide it elsewhere */ }
 .responsive-img {
-  width: 100%;
+  max-width: 100%;
   height: auto; }
 
 .header {
@@ -1123,21 +1123,53 @@ a {
   .section-1 .article-1 {
     padding: 1rem; }
 
-.section-2 {
-  grid-template-columns: auto auto; }
-  .section-2 .article-1 {
-    grid-area: article1; }
-  .section-2 .article-2 {
-    grid-area: article2; }
-  .section-2 .article-3 {
-    grid-area: article3; }
+.section-2 .article-1 {
+  grid-area: article1; }
+  .section-2 .article-1 div:nth-child(1) {
+    text-align: center; }
+.section-2 .article-2 {
+  grid-area: article2; }
+  .section-2 .article-2 div:nth-child(1) {
+    text-align: center; }
+.section-2 .article-3 {
+  grid-area: article3; }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .section-2 {
+    justify-content: space-around;
+    grid-template-columns: 90%;
     grid-template-areas: "article1" "article2" "article3"; } }
-@media screen and (min-width: 768px) and (max-width: 1920px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .section-2 {
-    grid-template-areas: "article1 article1"; } }
+    justify-content: space-around;
+    grid-template-columns: 45% 45%;
+    grid-template-areas: "article1 article1" "article2 article3"; } }
+@media screen and (min-width: 992px) and (max-width: 1920px) {
+  .section-2 {
+    justify-content: space-around;
+    grid-template-columns: 45% 45%;
+    grid-template-areas: "article1 article1" "article2 article3"; }
+    .section-2 .article-2 div:nth-child(2) figure {
+      display: flex;
+      justify-content: center; } }
+.section-3 article[class*="article-"] {
+  text-align: center; }
+.section-3 article[class*="article-"] {
+  padding: 1.5rem; }
+.section-3 .article-2 > h2 {
+  margin: 0rem; }
+.section-3 .article-2 > p {
+  margin: 0.2rem 0rem; }
+
+.section-4 {
+  height: 40vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .section-4 .article-1 {
+    padding: 1rem; }
+
 /*06-components*/
 .top-nav {
   font-size: 1.8vmin;
@@ -1182,6 +1214,39 @@ a {
       font-size: 3vmin;
       font-family: "Lato", sans-serif;
       line-height: 1.7; }
+
+.section-2 {
+  line-height: 1.7;
+  color: #777;
+  font-family: "Lato", sans-serif; }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .section-2.font-resize {
+    font-size: 4vmin; } }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .section-2.font-resize {
+    font-size: 1.8vmin; } }
+@media screen and (min-width: 992px) and (max-width: 1920px) {
+  .section-2.font-resize {
+    font-size: 2.3vmin; } }
+.section-3 {
+  font-family: "Lato", sans-serif; }
+  .section-3 .article-1 {
+    color: #777;
+    font-size: 3vmin; }
+  .section-3 .article-2 {
+    color: white;
+    background-color: #616161; }
+
+.section-4 {
+  background-image: url("http://localhost/Proyectos-git/tecmalaga-sl/src/assets/images/nave-1.jpeg");
+  opacity: 0.75; }
+  .section-4 .article-1 span {
+    color: white;
+    letter-spacing: 0.625rem;
+    font-size: 3vmin;
+    font-family: "Lato", sans-serif;
+    line-height: 1.7; }
 
 /*07-utilities*/
 @keyframes appearSandChangesColor {
