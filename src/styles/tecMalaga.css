@@ -1227,6 +1227,15 @@ a {
     .section-5 .article-1 div.div-container {
       grid-template-columns: auto auto auto auto;
       grid-template-areas: "div1 div2 div3 div4" "div5 div6 div7 div8"; } }
+.section-6 {
+  height: 40vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .section-6 .article-1 {
+    padding: 1rem; }
+
 /*06-components*/
 .top-nav {
   font-size: 1.8vmin;
@@ -1321,6 +1330,16 @@ a {
     cursor: pointer; }
   .section-5 article[class*="article-"] div.div-container > div[class*="div-"]:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+.section-6 {
+  background-image: url("http://localhost/Proyectos-git/tecmalaga-sl/src/assets/images/nave-2.jpeg");
+  opacity: 0.75; }
+  .section-6 .article-1 span {
+    color: white;
+    letter-spacing: 0.625rem;
+    font-size: 3vmin;
+    font-family: "Lato", sans-serif;
+    line-height: 1.7; }
 
 /*07-utilities*/
 @keyframes appearSandChangesColor {
