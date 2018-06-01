@@ -1,0 +1,91 @@
+.section-5 {
+    padding: 1.5rem;
+    .article-1 {
+        grid-column-gap: 3vw;
+        div.div-container {
+            grid-column-gap: 3vw;
+            grid-row-gap: 3vh;
+            grid-area: divContainer;
+            >div[class*="div-"] img {
+                width: 100%;
+            }
+            .div-1 {
+                grid-area: div1;
+            }
+            .div-2 {
+                grid-area: div2;
+            }
+            .div-3 {
+                grid-area: div3;
+            }
+            .div-4 {
+                grid-area: div4;
+            }
+            .div-5 {
+                grid-area: div5;
+            }
+            .div-6 {
+                grid-area: div6;
+            }
+            .div-7 {
+                grid-area: div7;
+            }
+            .div-8 {
+                grid-area: div8;
+            }
+        }
+        div.prev {
+            grid-area: prev;
+        }
+        div.next {
+            grid-area: next;
+        }
+        div.next, div.prev{
+            span {
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .section-5 {
+        .article-1 {
+            justify-content: center;
+            grid-row-gap: 10vh;
+            grid-template-columns: 45% 45%;
+            grid-template-areas: "divContainer divContainer" "prev next";
+            div.div-container {
+                justify-content: space-around;
+                grid-template-columns: 45% 45%;
+                grid-template-areas: "div1 div1" "div2 div2" "div3 div3" "div4 div4" "div5 div5" "div6 div6" "div7 div7" "div8 div8";
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .section-5 {
+        .article-1 {
+            grid-template-columns: 3% 90% 3%;
+            grid-template-areas: "prev divContainer next";
+            div.div-container {
+                grid-template-columns: auto auto auto auto;
+                grid-template-areas: "div1 div2 div3 div4" "div5 div6 div7 div8";
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1920px) {
+    .section-5 {
+        .article-1 {
+            grid-template-columns: 3% 85% 3%;
+            grid-template-areas: "prev divContainer next";
+            div.div-container {
+                grid-template-columns: auto auto auto auto;
+                grid-template-areas: "div1 div2 div3 div4" "div5 div6 div7 div8";
+            }
+        }
+    }
+}
