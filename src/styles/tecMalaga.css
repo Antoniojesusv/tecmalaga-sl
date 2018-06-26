@@ -1151,7 +1151,9 @@ a {
     grid-template-areas: "article1 article1" "article2 article3"; }
     .section-2 .article-2 div:nth-child(2) figure {
       display: flex;
-      justify-content: center; } }
+      justify-content: center; }
+    .section-2 .article-2 div:nth-child(2) figure img {
+      height: 50vh; } }
 .section-3 article[class*="article-"] {
   text-align: center; }
 .section-3 article[class*="article-"] {
@@ -1330,7 +1332,7 @@ a {
   .font-resize {
     font-size: 4vmin; } }
 .section-1 {
-  background-image: url("http://localhost/Proyectos-git/tecmalaga-sl/src/assets/images/nave-3.jpeg");
+  background-image: url("https://tecmalagaa.000webhostapp.com/src/assets/images/nave-3.jpeg");
   opacity: 0.75; }
   .section-1 .article-1 {
     background-color: black; }
@@ -1365,7 +1367,7 @@ a {
     background-color: #616161; }
 
 .section-4 {
-  background-image: url("http://localhost/Proyectos-git/tecmalaga-sl/src/assets/images/nave-1.jpeg");
+  background-image: url("https://tecmalagaa.000webhostapp.com/src/assets/images/nave-1.jpeg");
   opacity: 0.75; }
   .section-4 .article-1 span {
     color: white;
@@ -1393,7 +1395,7 @@ a {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
 
 .section-6 {
-  background-image: url("http://localhost/Proyectos-git/tecmalaga-sl/src/assets/images/nave-2.jpeg");
+  background-image: url("https://tecmalagaa.000webhostapp.com/src/assets/images/nave-2.jpeg");
   opacity: 0.75; }
   .section-6 .article-1 span {
     color: white;
