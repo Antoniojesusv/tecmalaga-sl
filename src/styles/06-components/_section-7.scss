@@ -1,0 +1,36 @@
+.section-7 {
+    .article-1 {
+        color: #777;
+    }
+    .article-2 {
+        border-radius: 8px;
+    }
+    .article-3 {
+        color: #777;
+        font-family: "Lato", sans-serif;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .section-7 {
+        .article-3.font-resize {
+            font-size: 4vmin;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .section-7 {
+        .article-3.font-resize {
+            font-size: 2vmin;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1920px) {
+    .section-7 {
+        .article-3.font-resize {
+            font-size: 2.3vmin;
+        }
+    }
+}

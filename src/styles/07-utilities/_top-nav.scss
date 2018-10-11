@@ -1,0 +1,13 @@
+@keyframes appearSandChangesColor {
+    0% {
+        top: -300px;
+        opacity:0;
+        background-color: transparent;
+    }
+    100% {
+        background-color: white;
+        top: 0;
+        bottom: 0%;
+        opacity:1
+    }
+}

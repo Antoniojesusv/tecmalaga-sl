@@ -1,0 +1,31 @@
+.top-nav {
+    font-size: 1.8vmin;
+    font-family: "Lato", sans-serif;
+    line-height: 1.7;
+    font-weight: bold;
+    ul {
+        li {
+            cursor: pointer;
+        }
+        li {
+            a {
+                color: rgb(13, 12, 14);
+            }
+        }
+        li:hover:not(:last-child) {
+            background-color: rgba(233, 207, 172, 0.8);
+        }
+        li:hover {
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+.top-nav.appear-sand-changes-color {
+    animation: appearSandChangesColor;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    position: relative;
+}

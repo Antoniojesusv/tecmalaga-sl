@@ -1,0 +1,27 @@
+.section-2 {
+    line-height: 1.7;
+    color: #777;
+    font-family: "Lato", sans-serif;
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+    .section-2.font-resize{
+        font-size: 4vmin;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .section-2.font-resize{
+        font-size: 1.8vmin;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1920px) {
+
+    .section-2.font-resize{
+        font-size: 2.3vmin;
+    }
+}

@@ -1,0 +1,27 @@
+.top-nav-mobile {
+    ul {
+        li {
+            a {
+                padding: 0rem 0.5rem;
+            }
+        }
+        position: relative;
+        >div {
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            li {
+                text-align: left;
+            }
+            li a {
+                padding: 0rem 0.5rem;
+            }
+        }
+        >div.dropdown-visible {
+            display: block;
+        }
+        >div.dropdown-no-visible {
+            display: none;
+        }
+    }
+}
