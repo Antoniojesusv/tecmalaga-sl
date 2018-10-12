@@ -7,11 +7,11 @@
         const router = new Router({
             routes: [
                 new Route({
-                    hash: 'touchToStar',
-                    html: 'touchToStart.html',
+                    hash: 'main',
+                    html: 'main.html',
                     defaultPage: true
                 }),
-                new Route({
+                /*new Route({
                     hash: 'eatInTakeOut',
                     html: 'eatInTakeOut.html'
                 }),
@@ -26,7 +26,7 @@
                 new Route({
                     hash: 'orderCorrect',
                     html: 'orderCorrect.html'
-                })
+                })*/
             ],
             rootElement: 'app',
             body: 'body',

@@ -27,9 +27,9 @@ Router.prototype = {
     },
 
     loadTags: (features) => ({
-        rootElement: document.getElementById(features.rootElement),
-        body: document.getElementById(features.body),
-        script: document.getElementById(features.script)
+        rootElement: window.document.getElementById(features.rootElement),
+        body: window.document.getElementById(features.body),
+        script: window.document.getElementById(features.script)
     }),
 
     hasChanged: function (scope, r) {
@@ -60,8 +60,8 @@ Router.prototype = {
 
     contentToDownload: function (htmlName) {
         const hash = htmlName.split('.');
-        const urlHtml = `views/html/${hash[0]}/${htmlName}`;
-        const urlControllers = `views/html/${hash[0]}/${hash[0]}.controller.js`;
+        const urlHtml = `src/views/html/${hash[0]}/${htmlName}`;
+        const urlControllers = `src/views/html/${hash[0]}/${hash[0]}.Controller.js`;
         return [urlHtml, urlControllers];
     },
 
