@@ -11,11 +11,11 @@
                     html: 'main.html',
                     defaultPage: true
                 }),
-                /*new Route({
-                    hash: 'eatInTakeOut',
-                    html: 'eatInTakeOut.html'
-                }),
                 new Route({
+                    hash: 'login',
+                    html: 'login.html'
+                }),
+                /*new Route({
                     hash: 'methodOfPayment',
                     html: 'methodOfPayment.html'
                 }),
