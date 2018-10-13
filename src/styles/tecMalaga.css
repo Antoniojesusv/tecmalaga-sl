@@ -340,7 +340,7 @@ ul {
 }
 
 ul li {
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 0.5rem;
   text-align: center;
 }
 
@@ -1927,7 +1927,7 @@ a {
 }
 /*06-components*/
 .top-nav {
-  font-size: 1.8vmin;
+  font-size: 1.7vmin;
   font-family: "Lato", sans-serif;
   line-height: 1.7;
   font-weight: bold;

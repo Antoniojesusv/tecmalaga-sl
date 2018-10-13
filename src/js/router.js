@@ -84,7 +84,13 @@ Router.prototype = {
 
     //preguntar a carlos por que el this.guy es a null 
     putScript: function (response) {
-        this.guy.script.innerHTML = response;
+        const oldScript = window.document.getElementById('script');
+        this.guy.body.removeChild(oldScript);
+        const script = window.document.createElement('script');
+        script.defer = true;
+        script.id = 'script';
+        script.innerHTML = response;
+        this.guy.body.appendChild(script);
     },
 
     putHtml: function (response) {
