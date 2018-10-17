@@ -22,11 +22,7 @@
     }],
     "no-undef": "warn",
     "object-shorthand": [2, "consistent"],
-    "no-underscore-dangle": ["error", {
-      "allowAfterThis": true,
-      "enforceInMethodNames": true,
-      "allow": ["$this_", "_view", "context_", "_gui"]
-    }]
+    "no-underscore-dangle": "off"
   }
 
 }

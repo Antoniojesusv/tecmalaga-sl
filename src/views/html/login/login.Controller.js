@@ -9,11 +9,25 @@ function LoginController(parameters = {}) {
   this._loginService = loginService;
   this._appConstants = appConstants;
   this._gui = this.loadDomElements();
+  this._serviceCommand = this.loadServicesCommand(this);
   this._gui.inputEmail.addEventListener('input', this.validateEmail.bind(this));
   this._gui.inputPassword.addEventListener('input', this.validatePassword.bind(this));
 }
 
 LoginController.prototype = Object.create({}, {
+  loadServicesCommand: {
+    value: context => ({
+      inputEmail: context._loginService.isValidEmail,
+      inputPassword: context._loginService.isValidPassword,
+      execute: function (name, parameters) {
+        return this[name] && this[name].call(context._loginService, ...parameters);
+      },
+    }),
+    enumerable: false,
+    writable: false,
+    configurable: false,
+  },
+
   validateEmail: {
     value: function (e) {
       e.preventDefault();
@@ -21,10 +35,11 @@ LoginController.prototype = Object.create({}, {
 
       const {
         value,
+        id,
       } = e.target;
 
       try {
-        if (!this._loginService.isValidEmail(value)) {
+        if (!this._serviceCommand.execute(id, [value])) {
           this.changeClassToFalse(tagIcon);
           return;
         }
@@ -47,10 +62,11 @@ LoginController.prototype = Object.create({}, {
 
       const {
         value,
+        id,
       } = e.target;
 
       try {
-        if (!this._loginService.isValidPassword(value)) {
+        if (!this._serviceCommand.execute(id, [value])) {
           this.changeClassToFalse(tagIcon);
           return;
         }

@@ -26,7 +26,6 @@ LoginService.prototype = Object.create(Services.prototype, {
         ISVALIDPASSWORD,
       } = this._appContants.CONSTANTSLOGINSERVICES;
 
-      console.log(ISVALIDPASSWORD.test(value));
       return ISVALIDPASSWORD.test(value);
     },
     enumerable: false,
