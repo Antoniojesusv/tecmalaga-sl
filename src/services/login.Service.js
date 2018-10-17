@@ -1,8 +1,9 @@
 const LoginService = function (appConstants) {
+  Services.apply(this);
   this._appContants = appConstants;
 };
 
-LoginService.prototype = Object.create({}, {
+LoginService.prototype = Object.create(Services.prototype, {
   isValidEmail: {
     value: function (value) {
       if (this.isValidParameterString(value)) throw new Error('mal');
@@ -12,13 +13,13 @@ LoginService.prototype = Object.create({}, {
 
       return reg.exec(value);
     },
-  },
-
-  isValidParameterString: {
-    value: value => !value || typeof value !== 'string',
+    enumerable: false,
+    writable: false,
+    configurable: false,
   },
 });
 
+LoginService.prototype.constructor = LoginService;
 const loginService = new LoginService(appConstants);
 
 Object.defineProperties(loginService, {
