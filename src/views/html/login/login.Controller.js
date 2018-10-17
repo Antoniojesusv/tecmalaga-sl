@@ -7,9 +7,9 @@ function LoginController(parameters = {}) {
 
   this._view = view;
   this._loginService = loginService;
-  this._AppConstants = appConstants;
+  this._appConstants = appConstants;
   this._gui = this.loadDomElements();
-  this._gui.inputEmail.addEventListener('keyup', this.validateEmail.bind(this));
+  this._gui.inputEmail.addEventListener('input', this.validateEmail.bind(this));
 }
 
 LoginController.prototype = Object.create({}, {
@@ -51,7 +51,7 @@ LoginController.prototype = Object.create({}, {
       const {
         INPUTEMAIL,
         INPUTPASSWORD,
-      } = this._AppConstants.CONSTANTSLOGINCONTROLLERS;
+      } = this._appConstants.CONSTANTSLOGINCONTROLLERS;
 
       return {
         inputEmail: this._view.getElementById(INPUTEMAIL),

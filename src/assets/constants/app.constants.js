@@ -1,7 +1,6 @@
-'use srict';
-
 const AppConstants = function () {
   this.CONSTANTSLOGINCONTROLLERS = this._LOADCONSTANTSLOGINCONTROLLERS();
+  this.CONSTANTSLOGINSERVICES = this._LOADCONSTANTSLOGINSERVICES();
 };
 
 AppConstants.prototype = Object.create({}, {
@@ -9,6 +8,20 @@ AppConstants.prototype = Object.create({}, {
     value: () => ({
       INPUTEMAIL: 'inputEmail',
       INPUTPASSWORD: 'inputPassword',
+    }),
+    enumerable: false,
+    writable: false,
+    configurable: false,
+  },
+
+  _LOADCONSTANTSLOGINSERVICES: {
+    value: () => ({
+      ISVALIDEMAIL: [
+        `^[a-zA-Z0-9.!#$%&'`,
+        '*+/=?^_`{|}~-]+@[a-zA-Z0-9]',
+        '(?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?',
+        '(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$',
+      ],
     }),
     enumerable: false,
     writable: false,
@@ -27,3 +40,4 @@ Object.defineProperties(appConstants, {
 });
 
 Object.freeze(appConstants.CONSTANTSLOGINCONTROLLERS);
+Object.freeze(appConstants.CONSTANTSLOGINSERVICES);
