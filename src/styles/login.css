@@ -19,9 +19,17 @@
     padding: 1rem;
 }
 
-.main-login .section-login-1 .article-login-1 form .div-form-group input[type=text] {
+.main-login .section-login-1 .article-login-1 form .div-form-group input[type=text], input[type=password] {
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.colorGreen {
+    color: #4CAF50;
+}
+
+.colorRed {
+    color: red;
 }
