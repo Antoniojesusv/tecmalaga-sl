@@ -22,6 +22,7 @@ AppConstants.prototype = Object.create({}, {
         '(?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?',
         '(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$',
       ],
+      ISVALIDPASSWORD: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\S])(?=.{8,})/,
     }),
     enumerable: false,
     writable: false,

@@ -10,6 +10,7 @@ function LoginController(parameters = {}) {
   this._appConstants = appConstants;
   this._gui = this.loadDomElements();
   this._gui.inputEmail.addEventListener('input', this.validateEmail.bind(this));
+  this._gui.inputPassword.addEventListener('input', this.validatePassword.bind(this));
 }
 
 LoginController.prototype = Object.create({}, {
@@ -24,6 +25,32 @@ LoginController.prototype = Object.create({}, {
 
       try {
         if (!this._loginService.isValidEmail(value)) {
+          this.changeClassToFalse(tagIcon);
+          return;
+        }
+
+        this.changeClassToTrue(tagIcon);
+      } catch (error) {
+        this.changeClassToFalse(tagIcon);
+        console.log(error);
+      }
+    },
+    enumerable: false,
+    writable: false,
+    configurable: false,
+  },
+
+  validatePassword: {
+    value: function (e) {
+      e.preventDefault();
+      const tagIcon = this.getTagIcon(e);
+
+      const {
+        value,
+      } = e.target;
+
+      try {
+        if (!this._loginService.isValidPassword(value)) {
           this.changeClassToFalse(tagIcon);
           return;
         }
