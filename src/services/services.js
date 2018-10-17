@@ -26,6 +26,8 @@ Object.defineProperties(Services, {
       if (!this.can('isValidParameterString')) throw new Error('this class have not the method implemented isValidParameterString');
       return this._isValidParameterString;
     },
+    enumerable: false,
+    configurable: false,
   },
 
   _isValidParameterNumber: {
@@ -33,5 +35,7 @@ Object.defineProperties(Services, {
       if (!this.can('isValidParameterNumber')) throw new Error('this class have not the method implemented isValidParameterNumber');
       return this._isValidParameterNumber;
     },
+    enumerable: false,
+    configurable: false,
   },
 });

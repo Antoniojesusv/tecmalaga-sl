@@ -20,9 +20,8 @@ LoginService.prototype = Object.create(Services.prototype, {
 });
 
 LoginService.prototype.constructor = LoginService;
-const loginService = new LoginService(appConstants);
 
-Object.defineProperties(loginService, {
+Object.defineProperties(LoginService, {
   _appContants: {
     enumerable: false,
     writable: false,

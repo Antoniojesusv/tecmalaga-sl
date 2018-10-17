@@ -29,9 +29,7 @@ AppConstants.prototype = Object.create({}, {
   },
 });
 
-const appConstants = new AppConstants();
-
-Object.defineProperties(appConstants, {
+Object.defineProperties(AppConstants, {
   CONSTANTSLOGINCONTROLLERS: {
     enumerable: false,
     writable: false,
@@ -39,5 +37,5 @@ Object.defineProperties(appConstants, {
   },
 });
 
-Object.freeze(appConstants.CONSTANTSLOGINCONTROLLERS);
-Object.freeze(appConstants.CONSTANTSLOGINSERVICES);
+Object.freeze(AppConstants.CONSTANTSLOGINCONTROLLERS);
+Object.freeze(AppConstants.CONSTANTSLOGINSERVICES);
