@@ -1,0 +1,17 @@
+.section-3{
+    article[class*="article-"]{
+        text-align: center;
+    }
+
+    article[class*="article-"]{
+        padding: 1.5rem;
+    }
+
+    .article-2 >h2 {
+        margin: 0rem;
+    }
+
+    .article-2 >p {
+        margin: 0.2rem 0rem;
+    }
+}

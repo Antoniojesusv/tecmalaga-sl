@@ -1,0 +1,13 @@
+.top-nav {
+    ul {
+
+        li:nth-child(5) {
+            a {
+                padding: 0rem 0.5rem;
+            }
+        }
+        li:nth-child(5) {
+            text-align: right;
+        }
+    }
+}
