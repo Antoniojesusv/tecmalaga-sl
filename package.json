@@ -8,11 +8,6 @@
     "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
     "release": "standard-version"
   },
-  "standard-version": {
-    "scripts": {
-      "postcommit": "echo hola"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Antoniojesusv/tecmalaga-sl.git"
