@@ -1,10 +1,17 @@
 {
   "name": "tecmalaga-sl",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "It's a small project I'm doing for a company from Malaga (Spain) called Tecmalaga, the project is very simple, it will be a website where I will publish their products and the wonderful work they do every day with many future projections. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commitlint": "commitlint -E HUSKY_GIT_PARAMS",
+    "release": "standard-version"
+  },
+  "standard-version": {
+    "scripts": {
+      "postcommit": "echo hola"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,5 +25,11 @@
   "homepage": "https://github.com/Antoniojesusv/tecmalaga-sl#readme",
   "dependencies": {
     "animate.css": "^3.6.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-angular": "^7.1.2",
+    "husky": "^1.1.2",
+    "standard-version": "^4.4.0"
   }
 }
