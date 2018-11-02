@@ -26,9 +26,22 @@ gulp.task('copy:libs', () => {
     .pipe(gulp.dest('./dist/libs'));
 });
 
-gulp.task('html', () => {
+gulp.task('index.html', () => {
   gulp
     .src(['./index.html'])
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        removeComments: true,
+      }),
+    )
+    .pipe(gulp.dest('./dist'))
+    .pipe(connect.reload());
+});
+
+gulp.task('html', () => {
+  gulp
+    .src(['./src/**/*.html'])
     .pipe(
       htmlmin({
         collapseWhitespace: true,
@@ -56,7 +69,7 @@ gulp.task('jsmain', () => {
   gulp
     .src('./index.js')
     .pipe(minify())
-    .pipe(gulp.dest('./dist/src'))
+    .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
 });
 
@@ -70,15 +83,21 @@ gulp.task('js', () => {
 
 gulp.task('connect', () => {
   connect.server({
-    root: './dist/src',
+    root: './dist',
     livereload: true,
   });
 });
 
 gulp.task('watch', () => {
   gulp.watch(
-    ['./index.html', './src/**/*.css', './app.js', './src/**/*.js'],
-    ['html', 'css', 'jsmain', 'js'],
+    [
+      './index.html',
+      './src/**/*.html',
+      './src/**/*.css',
+      './index.js',
+      './src/**/*.js',
+    ],
+    ['index.html', 'html', 'css', 'jsmain', 'js'],
   );
 });
 
