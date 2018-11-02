@@ -3,6 +3,7 @@ const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const minify = require('gulp-minify');
+const npmDist = require('gulp-npm-dist');
 const connect = require('gulp-connect');
 
 const AUTOPREFIXER_BROWSERS = [
@@ -16,6 +17,14 @@ const AUTOPREFIXER_BROWSERS = [
   'android >= 4.4',
   'bb >= 10',
 ];
+
+gulp.task('copy:libs', () => {
+  gulp
+    .src(npmDist(), {
+      base: './node_modules',
+    })
+    .pipe(gulp.dest('./dist/libs'));
+});
 
 gulp.task('html', () => {
   gulp
