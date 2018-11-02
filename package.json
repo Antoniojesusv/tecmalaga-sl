@@ -1,6 +1,6 @@
 {
   "name": "tecmalaga-sl",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "It's a small project I'm doing for a company from Malaga (Spain) called Tecmalaga, the project is very simple, it will be a website where I will publish their products and the wonderful work they do every day with many future projections. ",
   "main": "index.js",
   "scripts": {
