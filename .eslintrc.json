@@ -1,5 +1,6 @@
 {
-  "extends": "airbnb-base",
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
 
   "env": {
     "node": true,
@@ -9,20 +10,16 @@
   },
 
   "rules": {
+    "prettier/prettier": ["error"],
     "no-plusplus": [0, {
       "allowForLoopAfterthoughts": true
     }],
-    "wrap-iife": [2, "inside", {
-      "functionPrototypeMethods": true
+    "object-shorthand": "off",
+    "no-underscore-dangle": ["error", {
+      "allowAfterThis": true,
+      "allow": ["context_", "_view", "_currentWord", "_lives", "_button", "_gui"]
     }],
-    "no-unused-vars": "warn",
     "func-names": ["error", "never"],
-    "quotes": ["error", "single", {
-      "allowTemplateLiterals": true
-    }],
-    "no-undef": "warn",
-    "object-shorthand": [2, "consistent"],
-    "no-underscore-dangle": "off"
+    "no-useless-return": "off"
   }
-
 }
