@@ -22,8 +22,11 @@ Services.prototype = Object.create(ValidateInterface.prototype, {
 
 Object.defineProperties(Services, {
   _isValidParameterString: {
-    get: function () {
-      if (!this.can('isValidParameterString')) throw new Error('this class have not the method implemented isValidParameterString');
+    get: function() {
+      if (!this.can('isValidParameterString'))
+        throw new Error(
+          'this class have not the method implemented isValidParameterString',
+        );
       return this._isValidParameterString;
     },
     enumerable: false,
@@ -31,8 +34,11 @@ Object.defineProperties(Services, {
   },
 
   _isValidParameterNumber: {
-    get: function () {
-      if (!this.can('isValidParameterNumber')) throw new Error('this class have not the method implemented isValidParameterNumber');
+    get: function() {
+      if (!this.can('isValidParameterNumber'))
+        throw new Error(
+          'this class have not the method implemented isValidParameterNumber',
+        );
       return this._isValidParameterNumber;
     },
     enumerable: false,

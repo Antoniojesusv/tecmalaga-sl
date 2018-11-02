@@ -1,14 +1,20 @@
-const LoginService = function (appConstants) {
+const LoginService = function(appConstants) {
   Services.apply(this);
   this._appContants = appConstants;
 };
 
 LoginService.prototype = Object.create(Services.prototype, {
   isValidEmail: {
-    value: function (value) {
-      if (this.isValidParameterString(value)) throw new Error('The parameter is not of type string');
+    value: function(value) {
+      if (this.isValidParameterString(value))
+        throw new Error('The parameter is not of type string');
 
-      const [part0, part1, part2, part3] = this._appContants.CONSTANTSLOGINSERVICES.ISVALIDEMAIL;
+      const [
+        part0,
+        part1,
+        part2,
+        part3,
+      ] = this._appContants.CONSTANTSLOGINSERVICES.ISVALIDEMAIL;
       const reg = new RegExp([part0, part1, part2, part3].join(''));
 
       return reg.exec(value);
@@ -19,12 +25,11 @@ LoginService.prototype = Object.create(Services.prototype, {
   },
 
   isValidPassword: {
-    value: function (value) {
-      if (this.isValidParameterString(value)) throw new Error('The parameter is not of type string');
+    value: function(value) {
+      if (this.isValidParameterString(value))
+        throw new Error('The parameter is not of type string');
 
-      const {
-        ISVALIDPASSWORD,
-      } = this._appContants.CONSTANTSLOGINSERVICES;
+      const { ISVALIDPASSWORD } = this._appContants.CONSTANTSLOGINSERVICES;
 
       return ISVALIDPASSWORD.test(value);
     },
