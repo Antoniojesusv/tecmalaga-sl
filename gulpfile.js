@@ -15,7 +15,7 @@ gulp.task('html', () => {
         removeComments: true,
       }),
     )
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist/src'))
     .pipe(connect.reload());
 });
 
@@ -34,9 +34,9 @@ gulp.task('css', () => {
 
 gulp.task('jsmain', () => {
   gulp
-    .src('./app.js')
+    .src('./index.js')
     .pipe(minify())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist/src'))
     .pipe(connect.reload());
 });
 
@@ -50,7 +50,7 @@ gulp.task('js', () => {
 
 gulp.task('connect', () => {
   connect.server({
-    root: './',
+    root: './dist/src',
     livereload: true,
   });
 });
