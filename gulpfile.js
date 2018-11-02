@@ -82,4 +82,4 @@ gulp.task('watch', () => {
   );
 });
 
-gulp.task('default', ['watch', 'connect']);
+gulp.task('default', ['watch', 'connect', 'copy:libs']);
