@@ -1,0 +1,1 @@
+function appException(n={}){const{name:t="appException",msg:i=""}=n;Error.call(this),this.name=t,this.msg=i}

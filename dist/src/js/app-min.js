@@ -1,0 +1,1 @@
+"use strict";!function(){new Router({routes:[new Route({hash:"main",html:"main.html",defaultPage:!0}),new Route({hash:"login",html:"login.html"})],rootElement:"app",body:"body",script:"script"})}();

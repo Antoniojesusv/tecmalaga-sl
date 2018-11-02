@@ -1,0 +1,1 @@
+const validationSpa={isValidFeaturesRouter:t=>!(t.routes&&t.routes instanceof Array||("string"==typeof t.rootElement||t.body,"string"==typeof t.script)),isValidFeaturesRoute:t=>!(t.hash||t.html||"string"==typeof t.hash||"string"==typeof t.html)};

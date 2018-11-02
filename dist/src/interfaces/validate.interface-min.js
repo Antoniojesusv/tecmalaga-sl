@@ -1,0 +1,1 @@
+function ValidateInterface(){}ValidateInterface.prototype=Object.create({},{can:{value:function(e){return"function"==typeof this[e]},enumerable:!1,configurable:!1,writable:!1}});
